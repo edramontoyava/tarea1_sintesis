@@ -1,0 +1,159 @@
+h1{
+    font-size: 70px;
+}
+header p{
+    font-size: 20px;
+}
+.L1{
+    width: 280px;
+    height: 140px;
+}
+.L2{
+    width: 140px;
+    height: 140px;
+    margin-right: 18px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    background: white;
+    display: grid;
+    height: 100vh;
+}
+header h1{
+    margin-top: 30px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+header{
+    text-align: center;
+    background: rgb(241, 121, 40);
+    color: white;
+}
+aside{
+    background: rgb(241, 121, 40);
+}
+nav{
+    background: rgb(241, 121, 40);
+}
+main{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid lightgray;
+    
+}
+footer{
+    text-align: center;
+    background: rgb(241, 121, 40);
+    color: white;
+    
+}
+footer p{
+    margin-top: 7px;
+    font-size: 25px;
+}
+.Elemento{
+    text-align: center;
+}
+main p{
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+@media (min-width:100px){
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: "h h"
+                             "n a"
+                             "m m"
+                             "f f";
+    }
+
+    header{
+        grid-area:h ;
+    }
+    nav{
+        grid-area:n ;
+    }
+    main{
+        grid-area:m ;
+
+    }
+    aside{
+        grid-area:a ;
+        text-align: end;
+    }
+    footer{
+        grid-area:f ;
+    }
+}
+
+@media (min-width:900px){
+    .contenedor{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 12% auto auto 3%;
+        grid-template-areas: "h h"
+                             "n m"
+                             "a m"
+                             "f f";
+    }
+
+    header{
+        grid-area:h ;
+    }
+    nav{
+        grid-area:n ;
+    }
+    main{
+        grid-area:m ;
+
+    }
+    aside{
+        grid-area:a ;
+        text-align: start;
+    }
+    footer{
+        grid-area:f ;
+    }
+}
+
+@media (min-width:1200px){
+    .contenedor{
+        grid-template-columns: 400px auto 400px;
+        grid-template-rows: 15% auto 5%;
+        grid-template-areas: "n h a"
+                             "m m m"
+                             "f f f";
+    }
+
+    header{
+        grid-area:h ;
+    }
+    nav{
+        grid-area:n ;
+    }
+    main{
+        grid-area:m ;
+    }
+    aside{
+        grid-area:a ;
+        text-align: end;
+    }
+    footer{
+        grid-area:f ;
+    }
+}
+
