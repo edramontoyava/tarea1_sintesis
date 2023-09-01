@@ -1,159 +1,216 @@
-h1{
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    min-width: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: rgb(241, 121, 40);;
+    color: #ffffff;
+    text-align: middle;
+}
+
+.content-table th,.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+th,td {
+    border: 1px solid lightgrey;
+}
+
+h1 {
     font-size: 70px;
 }
-header p{
+
+header p {
     font-size: 20px;
 }
-.L1{
+
+.L1 {
     width: 280px;
     height: 140px;
 }
-.L2{
+
+.L2 {
     width: 140px;
     height: 140px;
     margin-right: 18px;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.contenedor{
+
+.contenedor {
     background: white;
     display: grid;
     height: 100vh;
 }
-header h1{
+
+header h1 {
     margin-top: 30px;
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: black;
 }
-li{
+
+li {
     list-style: none;
 }
 
-header{
+header {
     text-align: center;
     background: rgb(241, 121, 40);
     color: white;
 }
-aside{
+
+aside {
     background: rgb(241, 121, 40);
 }
-nav{
+
+nav {
     background: rgb(241, 121, 40);
 }
-main{
+
+main {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: 3px solid lightgray;
-    
+
 }
-footer{
+
+footer {
     text-align: center;
     background: rgb(241, 121, 40);
     color: white;
-    
+
 }
-footer p{
+
+footer p {
     margin-top: 7px;
     font-size: 25px;
 }
-.Elemento{
+
+.Elemento {
     text-align: center;
 }
-main p{
+
+main p {
     margin-left: 200px;
     margin-right: 200px;
     text-align: justify;
 }
 
-@media (min-width:100px){
-    .contenedor{
+@media (min-width:100px) {
+    .contenedor {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-rows: 140px 1fr 1fr auto;
         grid-template-areas: "h h"
-                             "n a"
-                             "m m"
-                             "f f";
+            "n a"
+            "m m"
+            "f f";
     }
 
-    header{
-        grid-area:h ;
+    header {
+        grid-area: h;
     }
-    nav{
-        grid-area:n ;
+
+    nav {
+        grid-area: n;
     }
-    main{
-        grid-area:m ;
+
+    main {
+        grid-area: m;
 
     }
-    aside{
-        grid-area:a ;
+
+    aside {
+        grid-area: a;
         text-align: end;
     }
-    footer{
-        grid-area:f ;
+
+    footer {
+        grid-area: f;
     }
 }
 
-@media (min-width:900px){
-    .contenedor{
+@media (min-width:900px) {
+    .contenedor {
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 12% auto auto 3%;
+        grid-template-rows: 140px auto auto 3%;
         grid-template-areas: "h h"
-                             "n m"
-                             "a m"
-                             "f f";
+            "n m"
+            "a m"
+            "f f";
     }
 
-    header{
-        grid-area:h ;
+    header {
+        grid-area: h;
     }
-    nav{
-        grid-area:n ;
+
+    nav {
+        grid-area: n;
     }
-    main{
-        grid-area:m ;
+
+    main {
+        grid-area: m;
 
     }
-    aside{
-        grid-area:a ;
+
+    aside {
+        grid-area: a;
         text-align: start;
     }
-    footer{
-        grid-area:f ;
+
+    footer {
+        grid-area: f;
     }
 }
 
-@media (min-width:1200px){
-    .contenedor{
+@media (min-width:1200px) {
+    .contenedor {
         grid-template-columns: 400px auto 400px;
-        grid-template-rows: 15% auto 5%;
+        grid-template-rows: 140px auto 5%;
         grid-template-areas: "n h a"
-                             "m m m"
-                             "f f f";
+            "m m m"
+            "f f f";
     }
 
-    header{
-        grid-area:h ;
+    header {
+        grid-area: h;
     }
-    nav{
-        grid-area:n ;
+
+    nav {
+        grid-area: n;
     }
-    main{
-        grid-area:m ;
+
+    main {
+        grid-area: m;
     }
-    aside{
-        grid-area:a ;
+
+    aside {
+        grid-area: a;
         text-align: end;
     }
-    footer{
-        grid-area:f ;
+
+    footer {
+        grid-area: f;
     }
 }
-
